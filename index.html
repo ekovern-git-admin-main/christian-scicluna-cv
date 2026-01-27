@@ -49,7 +49,6 @@
             --tag-text: #cbd5e1;
             --card-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
 
-            /* Floating Nav Colors Dark */
             --nav-bg: rgba(30, 41, 59, 0.85);
             --nav-border: rgba(255, 255, 255, 0.1);
             --nav-text: #e2e8f0;
@@ -59,17 +58,17 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
         }
 
         body {
             font-family: 'Inter', sans-serif;
             color: var(--text-main);
             background: var(--bg-body);
-            line-height: 1.6;
-            transition: background 0.3s, color 0.3s;
-            padding-top: 40px; /* Slight breathing room top */
+            line-height: 1.5; 
+            padding-top: 40px;
+            padding-bottom: 40px;
         }
 
         /* --- FLOATING CONTROLS --- */
@@ -82,12 +81,11 @@
             backdrop-filter: var(--nav-backdrop);
             -webkit-backdrop-filter: var(--nav-backdrop);
             padding: 8px;
-            border-radius: 50px; /* Pill shape */
+            border-radius: 50px;
             display: flex;
             gap: 10px;
             z-index: 1000;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
         }
 
         .btn-control {
@@ -98,56 +96,42 @@
             border-radius: 20px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s;
             display: flex;
             align-items: center;
             gap: 8px;
             font-family: 'Inter', sans-serif;
             font-size: 0.85rem;
+            transition: all 0.2s ease;
         }
 
-        .btn-control:hover {
-            background: var(--nav-border);
-            color: var(--accent);
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #1d4ed8; 
-            color: white;
-            transform: translateY(-1px);
-            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
-        }
+        .btn-control:hover { background: var(--nav-border); color: var(--accent); }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-primary:hover { background: #1d4ed8; color: white; }
 
         /* --- PAGE LAYOUT --- */
         .page-container {
-            max-width: 1050px;
-            margin: 0 auto 40px;
+            width: 210mm; /* A4 Width */
+            margin: 0 auto;
             background: var(--bg-container);
             box-shadow: var(--card-shadow);
             display: grid;
-            grid-template-columns: 340px 1fr;
-            min-height: 1100px;
+            grid-template-columns: 32% 68%; 
+            min-height: 297mm; /* Ensure at least one A4 page height on web */
         }
 
         /* --- SIDEBAR --- */
         aside {
             background: var(--bg-sidebar);
             color: var(--text-sidebar);
-            padding: 40px 25px;
+            padding: 30px 25px; 
             position: relative;
-            overflow: hidden;
         }
 
         aside h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.2rem;
-            line-height: 1.1;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            line-height: 1;
+            margin-bottom: 8px;
             letter-spacing: -0.5px;
             color: #ffffff;
         }
@@ -156,112 +140,137 @@
             color: #93c5fd;
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             display: inline-block;
         }
 
-        .contact-info { margin-bottom: 40px; font-size: 0.9rem; }
+        .contact-info { margin-bottom: 30px; font-size: 0.85rem; }
         
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
+            gap: 10px;
+            margin-bottom: 8px;
             color: #cbd5e1;
         }
         
-        .contact-item a { color: inherit; text-decoration: none; transition: color 0.2s; }
-        .contact-item a:hover { color: white; }
+        .contact-item a { color: inherit; text-decoration: none; }
+        .contact-item i { width: 16px; text-align: center; }
 
         .side-header {
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: #94a3b8;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 5px;
-            margin-top: 35px;
+            padding-bottom: 4px;
+            margin-top: 25px;
+        }
+
+        /* Personal/Reading List in Sidebar */
+        .side-personal-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .side-personal-list li {
+            margin-bottom: 6px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #cbd5e1; /* Lighter text for dark sidebar */
+        }
+        
+        .side-personal-list li i {
+            color: #94a3b8; 
+            font-size: 0.7rem;
+            width: 15px;
+            text-align: center;
         }
 
         /* Jurisdiction Grid */
         .jurisdiction-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            column-gap: 10px;
-            row-gap: 6px;
-            margin-bottom: 25px;
+            column-gap: 8px;
+            row-gap: 5px;
+            margin-bottom: 20px;
         }
 
-        .j-item { font-size: 0.75rem; display: flex; align-items: center; white-space: nowrap; }
+        .j-item { font-size: 0.7rem; display: flex; align-items: center; white-space: nowrap; }
         .j-acronym { font-weight: 700; color: #ffffff; letter-spacing: 0.5px; }
-        .j-sep { margin: 0 5px; color: rgba(255,255,255,0.2); font-weight: 300; }
+        .j-sep { margin: 0 4px; color: rgba(255,255,255,0.2); font-weight: 300; }
         .j-country { color: #cbd5e1; font-weight: 400; }
 
         /* Tech Tags */
-        .tag-container { display: flex; flex-wrap: wrap; gap: 6px; }
+        .tag-container { display: flex; flex-wrap: wrap; gap: 5px; }
         
         .tag {
             background: var(--tag-bg);
             color: var(--tag-text);
-            padding: 4px 8px;
+            padding: 3px 8px;
             border-radius: 4px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 500;
             border: 1px solid rgba(255,255,255,0.05);
         }
 
         /* --- MAIN CONTENT --- */
         main {
-            padding: 50px 40px;
+            padding: 40px 35px;
             background: var(--bg-container);
         }
 
         .summary-box {
             background: var(--highlight-bg);
             border-left: 4px solid var(--accent);
-            padding: 20px;
+            padding: 15px 20px;
             margin-bottom: 25px;
-            border-radius: 0 8px 8px 0;
+            border-radius: 0 6px 6px 0;
+            break-inside: avoid;
         }
 
         main h2 {
             font-family: 'Montserrat', sans-serif;
             color: var(--primary);
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            margin-top: 40px;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            margin-top: 30px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            break-after: avoid; 
         }
-        main h2:first-of-type { margin-top: 10px; }
-        main h2 i { color: var(--accent); font-size: 1rem; }
+        main h2:first-of-type { margin-top: 5px; }
+        main h2 i { color: var(--accent); font-size: 0.9rem; }
 
         /* Career Focus Grid */
         .focus-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 30px;
+            gap: 12px;
+            margin-bottom: 25px;
         }
 
         .focus-item {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 0.95rem;
+            gap: 8px;
+            font-size: 0.85rem;
             color: var(--text-main);
             background: var(--bg-body);
-            padding: 10px;
-            border-radius: 6px;
+            padding: 8px 12px;
+            border-radius: 5px;
             font-weight: 500;
+            break-inside: avoid;
         }
 
         .focus-item i { color: var(--accent); }
@@ -270,35 +279,37 @@
         .highlights-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            gap: 12px;
             margin-bottom: 10px;
         }
 
         .highlight-card {
             background: var(--bg-container);
             border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 15px;
+            border-radius: 6px;
+            padding: 12px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            break-inside: avoid;
         }
 
         .highlight-metric {
             color: var(--accent);
             font-weight: 800;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-family: 'Montserrat', sans-serif;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
-        .highlight-desc { font-size: 0.9rem; color: var(--text-light); }
+        .highlight-desc { font-size: 0.85rem; color: var(--text-light); line-height: 1.4; }
 
         /* Job Items */
         .job-item {
             position: relative;
-            padding-left: 25px;
-            margin-bottom: 35px;
+            padding-left: 20px;
+            margin-bottom: 25px;
             border-left: 2px solid var(--border);
+            break-inside: avoid; /* Prevents splitting a job across pages */
         }
 
         .job-item::before {
@@ -317,27 +328,28 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
-        .job-title { font-weight: 700; font-size: 1.1rem; color: var(--primary); }
-        .company { font-weight: 600; color: var(--text-light); }
+        .job-title { font-weight: 700; font-size: 1rem; color: var(--primary); }
+        .company { font-weight: 600; color: var(--text-light); font-size: 0.9rem; }
         
         .date-range {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 600;
             color: var(--accent);
             background: rgba(37, 99, 235, 0.1);
             padding: 2px 8px;
             border-radius: 12px;
+            white-space: nowrap;
         }
 
         .job-details li {
             list-style: none;
             position: relative;
-            padding-left: 20px;
-            margin-bottom: 8px;
-            font-size: 0.92rem;
+            padding-left: 15px;
+            margin-bottom: 6px;
+            font-size: 0.85rem;
             color: var(--text-main);
         }
 
@@ -349,65 +361,52 @@
             font-weight: bold;
         }
 
-        /* Reading & Interests */
-        .personal-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 10px;
-            border-top: 1px solid var(--border);
-            padding-top: 30px;
+        /* --- PRINT OPTIMIZATION (Foolproof A4) --- */
+        @page {
+            size: A4;
+            margin: 0; /* Control margin via padding to ensure background colors bleed */
         }
 
-        .personal-col h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .personal-list { list-style: none; }
-        .personal-list li {
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-main);
-        }
-        .personal-list li i { color: var(--text-light); font-size: 0.8rem; }
-
-        /* --- PRINT OPTIMIZATION --- */
         @media print {
-            body { 
+            html, body {
+                width: 210mm;
+                height: 100%;
                 background: white; 
-                padding-top: 0; 
-                color: #334155;
+                margin: 0;
+                padding: 0;
             }
-            .floating-nav { display: none; }
-            .page-container { 
-                box-shadow: none; 
-                margin: 0; 
-                width: 100%; 
-                max-width: 100%;
+
+            .floating-nav { display: none !important; }
+
+            .page-container {
+                width: 100%;
+                max-width: 210mm;
+                box-shadow: none;
+                margin: 0;
                 border: none;
+                /* This gradient ensures the sidebar color goes down the full page length even if content stops */
+                background: linear-gradient(to right, #0f172a 32%, #ffffff 32%); 
+                display: grid;
+                grid-template-columns: 32% 68%;
             }
-            
-            aside { 
-                background: #0f172a !important; 
+
+            aside {
+                /* Make background transparent so the container gradient shows through */
+                background: transparent !important; 
                 color: white !important;
-                -webkit-print-color-adjust: exact; 
-                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+                padding-top: 15mm; /* Safe print margin top */
+                padding-left: 8mm; /* Safe print margin left */
             }
             
-            aside h1, .role-title, .j-acronym, .j-country { color: white !important; }
-            main { background: white; }
-            
-            .highlight-card, .focus-item { border: 1px solid #ccc; break-inside: avoid; }
-            .job-item, .summary-box, .personal-grid { break-inside: avoid; }
-            .jurisdiction-grid { break-inside: avoid; }
-            
+            main {
+                background: transparent !important;
+                color: #334155 !important;
+                padding-top: 15mm; /* Align with sidebar */
+                padding-right: 10mm; /* Safe print margin right */
+            }
+
+            /* Force Light Mode Colors for Print Text */
             :root {
                 --primary: #0f172a !important;
                 --text-main: #334155 !important;
@@ -416,6 +415,28 @@
                 --border: #e2e8f0 !important;
                 --highlight-bg: #f8fafc !important;
             }
+
+            .focus-item, .highlight-card {
+                border: 1px solid #ccc;
+                background: #fff !important;
+            }
+            
+            .job-item::before {
+                background: #fff !important; /* Fix dot background on print */
+            }
+
+            /* Prevent orphans/widows */
+            h2, h3, .job-title { break-after: avoid; page-break-after: avoid; }
+            .job-item { break-inside: avoid; page-break-inside: avoid; }
+            section, div, p { orphans: 3; widows: 3; }
+
+            /* Font Sizing for Print Readability */
+            p, li, .job-details li { font-size: 9pt; }
+            h1 { font-size: 22pt; }
+            h2 { font-size: 14pt; margin-top: 15pt; }
+            
+            /* Remove link underlines */
+            a { text-decoration: none; color: inherit; }
         }
     </style>
 </head>
@@ -445,7 +466,7 @@
 
             <div class="side-header">Jurisdictional Experience</div>
             
-            <div class="side-header" style="margin-top: 10px; border:none; font-size: 0.7rem;">Europe</div>
+            <div class="side-header" style="margin-top: 10px; border:none; font-size: 0.65rem; opacity:0.8;">Europe</div>
             
             <div class="jurisdiction-grid">
                 <div class="j-item"><span class="j-acronym">MGA</span><span class="j-sep">|</span><span class="j-country">Malta</span></div>
@@ -467,7 +488,7 @@
                 <div class="j-item"><span class="j-acronym">IoM</span><span class="j-sep">|</span><span class="j-country">Isle of Man</span></div>
             </div>
 
-            <div class="side-header" style="margin-top: 0px; border:none; font-size: 0.7rem;">Americas & RoW</div>
+            <div class="side-header" style="margin-top: 15px; border:none; font-size: 0.65rem; opacity:0.8;">Americas & RoW</div>
             <div class="jurisdiction-grid">
                 <div class="j-item"><span class="j-acronym">AGCO</span><span class="j-sep">|</span><span class="j-country">Ontario</span></div>
                 <div class="j-item"><span class="j-acronym">CODOG</span><span class="j-sep">|</span><span class="j-country">USA (CO)</span></div>
@@ -475,10 +496,9 @@
                 <div class="j-item"><span class="j-acronym">COL</span><span class="j-sep">|</span><span class="j-country">Colombia</span></div>
                 <div class="j-item"><span class="j-acronym">PEGA</span><span class="j-sep">|</span><span class="j-country">Peru</span></div>
                 <div class="j-item"><span class="j-acronym">SEGOB</span><span class="j-sep">|</span><span class="j-country">Mexico</span></div>
-                <div class="j-item"><span class="j-acronym">LOTBA</span><span class="j-sep">|</span><span class="j-country">Buenos Aires</span></div>
-                <div class="j-item"><span class="j-acronym">IPLYC</span><span class="j-sep">|</span><span class="j-country">BA Province</span></div>
+                <div class="j-item"><span class="j-acronym">LOTBA</span><span class="j-sep">|</span><span class="j-country">BA Aires</span></div>
+                <div class="j-item"><span class="j-acronym">IPLYC</span><span class="j-sep">|</span><span class="j-country">BA Prov</span></div>
                 <div class="j-item"><span class="j-acronym">LPCSE</span><span class="j-sep">|</span><span class="j-country">Córdoba</span></div>
-                <div class="j-item"><span class="j-acronym">CONAJZAR</span><span class="j-sep">|</span><span class="j-country">Paraguay</span></div>
                 <div class="j-item"><span class="j-acronym">KGA</span><span class="j-sep">|</span><span class="j-country">Kazakhstan</span></div>
                 <div class="j-item"><span class="j-acronym">BCLB</span><span class="j-sep">|</span><span class="j-country">Kenya</span></div>
                 <div class="j-item"><span class="j-acronym">NLRC</span><span class="j-sep">|</span><span class="j-country">Nigeria</span></div>
@@ -515,11 +535,28 @@
                 <span class="tag">C++</span>
                 <span class="tag">HTML / CSS</span>
             </div>
+
+            <div class="side-header">Inspiration</div>
+            <ul class="side-personal-list">
+                <li><i class="fas fa-book-open"></i> Simon Sinek</li>
+                <li><i class="fas fa-book-open"></i> David L. Marquet</li>
+                <li><i class="fas fa-book-open"></i> Stephen R. Covey</li>
+                <li><i class="fas fa-book-open"></i> Jocko Willink & Leif Babin</li>
+            </ul>
+
+            <div class="side-header">Interests & Innovation</div>
+            <ul class="side-personal-list">
+                <li><i class="fas fa-robot"></i> Ops Collaboration Tools</li>
+                <li><i class="fas fa-sliders-h"></i> Automation Design</li>
+                <li><i class="fas fa-brain"></i> LLM API (OpenAI, SD)</li>
+                <li><i class="fas fa-music"></i> Audio Engineering</li>
+            </ul>
+
         </aside>
 
         <main>
             <div class="summary-box">
-                <p style="font-size: 0.95rem;">
+                <p style="font-size: 0.9rem; margin-bottom: 0;">
                     <strong>Strategic Operations Leader</strong> with 18+ years optimizing high-velocity environments. Expert in unifying Incident Management, Operational Excellence, and Change Enablement into a cohesive performance engine. Proven track record in scaling global support models across 30+ regulated markets, driving automation to reduce overhead, and leading cross-functional teams through critical business events.
                 </p>
             </div>
@@ -540,15 +577,15 @@
                 </div>
                 <div class="highlight-card">
                     <span class="highlight-metric">Record Speed KPIs</span>
-                    <span class="highlight-desc">Consistently achieved MTTA &lt;60s and MTTR &lt;6.5hrs across all priorities.</span>
+                    <span class="highlight-desc">Consistently achieved MTTA &lt;60s and MTTR &lt;6.5hrs.</span>
                 </div>
                 <div class="highlight-card">
                     <span class="highlight-metric">+60% Resolution</span>
-                    <span class="highlight-desc">Increase in first-call resolution via new SOPs and training protocols.</span>
+                    <span class="highlight-desc">Increase in first-call resolution via new SOPs and training.</span>
                 </div>
                 <div class="highlight-card">
                     <span class="highlight-metric">AI Innovation</span>
-                    <span class="highlight-desc">Proposed LLM-based RCA platform integrating Jira, chat logs, and incident data.</span>
+                    <span class="highlight-desc">Proposed LLM-based RCA platform integrating Jira & incident data.</span>
                 </div>
             </div>
 
@@ -577,7 +614,6 @@
                     <li><strong>Strategic Management:</strong> Drive team success by managing manpower, shift coverage, and performance against strict KPIs (MTTR, Availability, DORA metrics) while fostering an agile way of working.</li>
                     <li><strong>Post-Mortem & Improvement:</strong> Lead rigorous post-mortem analysis on high-impact incidents to drive continuous improvement and prevent recurrence.</li>
                     <li><strong>Technical Environment Oversight:</strong> Direct the detection and analysis of events across a complex technical landscape (AWS, Windows/Linux, CI/CD) supporting revenue-generating products.</li>
-                    <li><strong>Representative Duties:</strong> Represent operations in strategic vendor reviews, budgeting discussions, and ISO compliance audits.</li>
                 </ul>
             </div>
 
@@ -637,28 +673,6 @@
                 </ul>
             </div>
 
-            <div class="personal-grid">
-                <div class="personal-col">
-                    <h3>Who do I read?</h3>
-                    <ul class="personal-list">
-                        <li><i class="fas fa-book-open"></i> Simon Sinek</li>
-                        <li><i class="fas fa-book-open"></i> David L. Marquet</li>
-                        <li><i class="fas fa-book-open"></i> Stephen R. Covey</li>
-                        <li><i class="fas fa-book-open"></i> Jocko Willink & Leif Babin</li>
-                        <li><i class="fas fa-book-open"></i> Tom Clancy</li>
-                    </ul>
-                </div>
-                <div class="personal-col">
-                    <h3>Interests & Innovation</h3>
-                    <ul class="personal-list">
-                        <li><i class="fas fa-robot"></i> Operational Collaboration Tools</li>
-                        <li><i class="fas fa-sliders-h"></i> Automation & Workflow Design</li>
-                        <li><i class="fas fa-brain"></i> LLM API Usage (OpenAI, Topaz, SD)</li>
-                        <li><i class="fas fa-music"></i> Audio Engineering</li>
-                    </ul>
-                </div>
-            </div>
-
         </main>
     </div>
 
@@ -669,7 +683,6 @@
         const text = toggleBtn.querySelector('span');
         const html = document.documentElement;
 
-        // Load saved preference
         const savedTheme = localStorage.getItem('theme') || 'light';
         html.setAttribute('data-theme', savedTheme);
         updateIcon(savedTheme);
