@@ -1,322 +1,436 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<title>Christian Scicluna &mdash; Senior Manager, Process Improvement</title>
+<meta name="description" content="CV of Christian Scicluna, process improvement and operations leader with 20+ years in high-velocity regulated operations.">
+<style>
+:root{
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","Liberation Sans",Arial,sans-serif;
+  --desk:#eceae5; --paper:#ffffff; --shadow:0 24px 60px -24px rgba(23,25,28,.35);
+  --ink:#0f172a; --body:#3d4756; --muted:#6b7687; --faint:#9aa4b4;
+  --rule:#e3e7ee; --rule-soft:#eef1f6; --card-alt:#fafbfd;
+  --accent:#1d4ed8; --accent-soft:rgba(29,78,216,.09);
+  --chip:#f2f5fa; --chip-br:#e3e7ee;
+  --chip-a-bg:rgba(29,78,216,.08); --chip-a-br:#c7d5f0; --chip-a-ink:#16357f;
+  --nav-a:#16223d; --nav-b:#0f172a; --nav-c:#0b1220;
+  --nav-ink:#ffffff; --nav-sub:#7f9dd4; --nav-body:#cbd5e1; --nav-rule:rgba(255,255,255,.14);
+  --bar:rgba(255,255,255,.86); --bar-br:#d9d6cf; --bar-ink:#2c333d;
+}
+html[data-theme="dark"]{
+  --desk:#0a0d13; --paper:#151a23; --shadow:0 24px 60px -24px rgba(0,0,0,.7);
+  --ink:#eef2f8; --body:#c2ccd9; --muted:#93a0b2; --faint:#6d7889;
+  --rule:#2a3342; --rule-soft:#222a36; --card-alt:#1a212c;
+  --accent:#7aa2f7; --accent-soft:rgba(122,162,247,.14);
+  --chip:#1d2532; --chip-br:#2a3342;
+  --chip-a-bg:rgba(122,162,247,.13); --chip-a-br:#324661; --chip-a-ink:#a9c3fb;
+  --nav-a:#111a29; --nav-b:#0c1320; --nav-c:#080d16;
+  --nav-ink:#eef2f8; --nav-sub:#7aa2f7; --nav-body:#aab6c6; --nav-rule:rgba(255,255,255,.1);
+  --bar:rgba(21,26,35,.9); --bar-br:#2a3342; --bar-ink:#dbe3ee;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--desk);font-family:var(--font);color:var(--body);-webkit-print-color-adjust:exact;print-color-adjust:exact;transition:background .2s}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent)}
+
+/* ---- toolbar ---- */
+.bar{position:fixed;top:18px;right:18px;z-index:20;display:flex;gap:8px}
+.bar button{display:flex;align-items:center;gap:7px;font:600 12px/1 var(--font);color:var(--bar-ink);
+  background:var(--bar);border:1px solid var(--bar-br);border-radius:999px;padding:9px 14px;cursor:pointer;
+  backdrop-filter:blur(8px);transition:border-color .15s,color .15s}
+.bar button:hover{border-color:var(--accent);color:var(--accent)}
+.bar svg{width:13px;height:13px;flex:none}
+
+/* ---- paged document view ---- */
+.desk{display:flex;flex-direction:column;align-items:center;gap:30px;padding:40px 20px 64px}
+.wrap{width:calc(794px * var(--s,1));height:calc(1123px * var(--s,1))}
+.page{width:794px;height:1123px;background:var(--paper);box-shadow:var(--shadow);overflow:hidden;
+  display:flex;flex-direction:column;transform:scale(var(--s,1));transform-origin:top left}
+
+/* ---- navy heads ---- */
+.nav{background:linear-gradient(120deg,var(--nav-a) 0%,var(--nav-b) 60%,var(--nav-c) 100%);color:var(--nav-ink)}
+.nav--main{padding:52px 56px 28px}
+.nav--run{padding:24px 56px;display:flex;justify-content:space-between;align-items:center}
+.mast{display:flex;justify-content:space-between;align-items:flex-start;gap:28px}
+.name{font-size:37px;font-weight:700;letter-spacing:-.9px;line-height:1.05}
+.name--sm{font-size:15px;font-weight:700;letter-spacing:-.3px}
+.role{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:2.3px;color:var(--nav-sub);margin-top:10px}
+.role--run{margin-top:0}
+.contact{display:flex;flex-direction:column;gap:7px;font-size:11.5px;color:var(--nav-body);align-items:flex-start}
+.crow{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.crow svg{width:12px;height:12px;flex:none;color:var(--nav-sub)}
+.navrule{height:1px;background:var(--nav-rule);margin:22px 0 16px}
+.stats{display:flex;gap:32px;font-size:11.5px;color:var(--nav-body)}
+.stats span{white-space:nowrap}
+.stats strong{color:var(--nav-ink);font-weight:600}
+
+/* ---- body ---- */
+.doc{padding:34px 56px 36px;display:flex;flex-direction:column;flex:1}
+.h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink);
+  padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted)}
+.summary{font-size:14px;line-height:1.62;color:var(--body);margin:0;text-wrap:pretty}
+.summary strong{color:var(--ink);font-weight:600}
+.p{font-size:12.5px;line-height:1.55;color:var(--body);margin:11px 0 0}
+.p--muted{color:var(--muted)}
+.txt{font-size:12px;line-height:1.6;color:var(--body);margin-top:10px}
+.txt strong{color:var(--ink);font-weight:600}
+.foot{margin-top:auto;padding-top:20px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;
+  font-size:9.5px;letter-spacing:1.3px;text-transform:uppercase;color:var(--faint)}
+
+/* ---- kpis ---- */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:28px}
+.kpi{border:1px solid var(--rule);border-radius:8px;padding:16px}
+.kpi b{display:block;font-size:25px;font-weight:700;color:var(--accent);letter-spacing:-.5px}
+.kpi h4{font-size:11px;font-weight:600;color:var(--ink);margin:7px 0 5px}
+.kpi p{font-size:10.5px;line-height:1.45;color:var(--muted);margin:0}
+
+/* ---- role ---- */
+.jobhead{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:18px}
+.jobtitle{font-size:16px;font-weight:700;color:var(--ink)}
+.jobmeta{font-size:12px;font-weight:500;color:var(--muted);margin-top:2px}
+.pill{font-size:10.5px;font-weight:600;color:var(--accent);background:var(--accent-soft);
+  padding:3px 9px;border-radius:11px;white-space:nowrap}
+.note{font-size:12px;line-height:1.55;color:var(--muted);margin-top:10px;font-style:italic}
+.bullets{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:11px}
+.bullets li{position:relative;padding-left:15px;font-size:12.8px;line-height:1.55;color:var(--body)}
+.bullets li::before{content:'';position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.bullets strong{color:var(--ink);font-weight:600}
+
+/* ---- systems ---- */
+.feature{border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:8px;
+  padding:15px 18px;margin-top:16px;background:var(--card-alt)}
+.feature-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.feature-head h3{font-size:14.5px;font-weight:700;color:var(--ink);margin:0}
+.feature-tag{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent)}
+.feature p{font-size:12.5px;line-height:1.5;color:var(--body);margin:8px 0 0}
+.metrics{display:flex;gap:22px;margin-top:9px;padding-top:9px;border-top:1px solid var(--rule);font-size:11px;color:var(--muted)}
+.metrics strong{color:var(--accent);font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:12px}
+.card{border:1px solid var(--rule);border-radius:8px;padding:13px 15px}
+.card--alt{background:var(--card-alt)}
+.card h4{font-size:12.8px;font-weight:700;color:var(--ink);margin:0}
+.card p{font-size:11.5px;line-height:1.45;color:var(--muted);margin:6px 0 0}
+.tb-head{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent)}
+.tb-head--soft{color:var(--muted)}
+.ticks{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.ticks li{position:relative;padding-left:14px;font-size:11.5px;line-height:1.45;color:var(--body)}
+.ticks li::before{content:'';position:absolute;left:0;top:6px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.ticks--soft li::before{background:var(--faint)}
+
+/* ---- career ---- */
+.career{display:flex;flex-direction:column;margin-top:2px}
+.job{display:grid;grid-template-columns:116px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--rule-soft)}
+.cdate{font-size:11px;font-weight:600;color:var(--accent);padding-top:2px}
+.ctitle{font-size:13px;font-weight:700;color:var(--ink)}
+.ctitle span{font-weight:500;color:var(--muted)}
+.cdesc{font-size:12px;line-height:1.55;color:var(--muted);margin-top:5px}
+
+/* ---- capability ---- */
+.cap{display:grid;grid-template-columns:1fr 1fr;gap:26px 32px;margin-top:16px}
+.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:16px}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+.tag{background:var(--chip);border:1px solid var(--chip-br);color:var(--body);padding:4px 9px;border-radius:4px;
+  font-size:11px;font-weight:500;white-space:nowrap}
+.tag--a{background:var(--chip-a-bg);border-color:var(--chip-a-br);color:var(--chip-a-ink);font-weight:600}
+
+/* ---- print: always light, one A4 sheet per page, links preserved ---- */
+@page{size:A4;margin:0}
+@media print{
+  html,html[data-theme="dark"]{
+    --desk:#fff; --paper:#fff; --shadow:none;
+    --ink:#0f172a; --body:#3d4756; --muted:#6b7687; --faint:#9aa4b4;
+    --rule:#e3e7ee; --rule-soft:#eef1f6; --card-alt:#fafbfd;
+    --accent:#1d4ed8; --accent-soft:rgba(29,78,216,.09);
+    --chip:#f2f5fa; --chip-br:#e3e7ee;
+    --chip-a-bg:rgba(29,78,216,.08); --chip-a-br:#c7d5f0; --chip-a-ink:#16357f;
+    --nav-a:#16223d; --nav-b:#0f172a; --nav-c:#0b1220;
+    --nav-ink:#fff; --nav-sub:#7f9dd4; --nav-body:#cbd5e1; --nav-rule:rgba(255,255,255,.14);
+  }
+  body{background:#fff}
+  .bar{display:none}
+  .desk{display:block;padding:0;gap:0}
+  .wrap{width:auto;height:auto}
+  .page{width:210mm;height:297mm;transform:none;box-shadow:none;break-after:page;page-break-after:always}
+  .page:last-child{break-after:auto;page-break-after:auto}
+}
+</style>
 </head>
 <body>
-<x-dc>
-<helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-<style>
-  body { margin: 0; background: #eceae5; font-family: 'Instrument Sans', sans-serif; color: #3d4756; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  a { color: inherit; text-decoration: none; }
-  a:hover { color: #2563eb; }
-</style>
-<script src="./doc-page.js"></script>
-</helmet>
-<doc-page size="a4" margin="0">
 
-  <section class="page" data-screen-label="01" style="display: flex; flex-direction: column; background: #ffffff; font-family: 'Instrument Sans', sans-serif;">
-    <div style="background: linear-gradient(120deg, #16223d 0%, #0f172a 60%, #0b1220 100%); padding: 52px 56px 28px; color: #ffffff;">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 28px;">
+<div class="bar">
+  <button id="pdf" type="button" aria-label="Download as PDF">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="M7 11l5 5 5-5"></path><path d="M4 20h16"></path></svg>
+    Download PDF
+  </button>
+  <button id="theme" type="button" aria-label="Toggle dark mode">
+    <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.2A8.5 8.5 0 019.8 3.5a8.5 8.5 0 1010.7 10.7z"></path></svg>
+    <span id="themeLabel">Dark</span>
+  </button>
+</div>
+
+<main class="desk">
+
+<!-- ============ PAGE 1 ============ -->
+<div class="wrap"><section class="page">
+  <div class="nav nav--main">
+    <div class="mast">
+      <div>
+        <h1 class="name">Christian Scicluna</h1>
+        <div class="role">Senior Manager &middot; Process Improvement</div>
+      </div>
+      <div class="contact">
+        <div class="crow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s7-6.4 7-11.2a7 7 0 10-14 0c0 4.8 7 11.2 7 11.2z"></path><circle cx="12" cy="10.1" r="2.5"></circle></svg>
+          <span>Marsaskala, Malta</span>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6.4 3h3.1l1.5 4-2.1 1.5a12.4 12.4 0 006.6 6.6l1.5-2.1 4 1.5v3.1a2 2 0 01-2.2 2A16.6 16.6 0 013 5.2 2 2 0 015 3h1.4z"></path></svg>
+          <a href="tel:+35679333399">+356 79 33 33 99</a>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.8" width="18.8" height="14.4" rx="2.2"></rect><path d="M3.2 6.2L12 12.8l8.8-6.6"></path></svg>
+          <a href="mailto:sen997@gmail.com">sen997@gmail.com</a>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="4.3" cy="4.4" r="2.3"></circle><rect x="2.3" y="8.5" width="4" height="13.2"></rect><path d="M9.4 8.5h3.9v1.8c.7-1.2 2-2.2 4-2.2 3 0 4.9 2 4.9 5.5v8.1h-4v-7.3c0-1.7-.7-2.8-2.2-2.8s-2.6 1.1-2.6 2.8v7.3h-4z"></path></svg>
+          <a href="https://www.linkedin.com/in/christian-scicluna-itil">linkedin.com/in/christian-scicluna-itil</a>
+        </div>
+      </div>
+    </div>
+    <div class="navrule"></div>
+    <div class="stats">
+      <span><strong>20+ yrs</strong> operations</span>
+      <span><strong>25 staff</strong> across 4 disciplines</span>
+      <span><strong>30+</strong> regulated markets</span>
+      <span><strong>24&times;7</strong> multi-brand estate</span>
+    </div>
+  </div>
+
+  <div class="doc">
+    <p class="summary">Process improvement leader with 20+ years in high-velocity, heavily regulated operations. I analyse how the work actually moves, redesign the workflow around what I find, and build the automation that removes the steps that never needed a person &mdash; including the judgement of where an AI agent is allowed to act and where it may only advise. <strong>Incident and crisis command is the proving ground rather than the ambition:</strong> every redesign is measured on live production numbers, in front of executives.</p>
+
+    <div class="kpis">
+      <div class="kpi"><b>&minus;45%</b><h4>Alert volume</h4><p>Monitoring redesign; non-actionable noise removed.</p></div>
+      <div class="kpi"><b>+60%</b><h4>First-call resolution</h4><p>New SOPs and structured 24&times;7 training.</p></div>
+      <div class="kpi"><b>&lt;60s</b><h4>MTTA &middot; MTTR &lt;6.5h</h4><p>Organisation records, sustained.</p></div>
+      <div class="kpi"><b>15&ndash;20h</b><h4>Freed per engineer</h4><p>One intake portal replaced fragmented channels.</p></div>
+    </div>
+
+    <div class="h2" style="margin-top:32px">Current role</div>
+    <div class="jobhead">
+      <div>
+        <div class="jobtitle">Incident &amp; Crisis Manager</div>
+        <div class="jobmeta">Betsson Group &middot; LiveOps</div>
+      </div>
+      <div class="pill">Jun 2020 &ndash; Present</div>
+    </div>
+    <div class="note">Title held since 2020; the remit has grown well past it. Process ownership for the LiveOps organisation, ownership of its tooling estate, and design and build of the platforms on page two now sit inside the same role.</div>
+    <ul class="bullets">
+      <li><strong>Process ownership.</strong> End-to-end incident, change and problem workflows: current-state mapping, removal of handoffs that add delay without adding control, every redesign held to a measured outcome.</li>
+      <li><strong>Systems and tooling ownership.</strong> Own the LiveOps tooling estate, its budget and its vendor relationships &mdash; and specify, build and run the internal platforms rather than commissioning them out.</li>
+      <li><strong>People leadership.</strong> 25 staff across four disciplines. Structured one-to-ones, clear progression paths, real ownership delegated rather than tasks; the team retained through successive operating-model changes.</li>
+      <li><strong>Major incident command.</strong> Primary decision-maker for service restoration across all brands and jurisdictions; owner of B2B and B2C commercial communication during high-impact events.</li>
+      <li><strong>Continuous improvement.</strong> Post-mortem findings converted into standing process change, monitoring rules and automation, tracked on MTTR, availability and DORA metrics.</li>
+      <li><strong>Governance.</strong> Operational process kept aligned to ISO 27001 and multi-jurisdiction regulatory frameworks, with audit-ready traceability end to end.</li>
+    </ul>
+
+    <div class="foot"><span>Christian Scicluna &middot; Senior Manager, Process Improvement</span><span>Page 1 of 3</span></div>
+  </div>
+</section></div>
+
+<!-- ============ PAGE 2 ============ -->
+<div class="wrap"><section class="page">
+  <div class="nav nav--run">
+    <div class="name--sm">Christian Scicluna</div>
+    <div class="role role--run">Systems built &amp; run</div>
+  </div>
+
+  <div class="doc">
+    <div class="h2">Systems portfolio</div>
+    <p class="p p--muted">Seven platforms specified, built and run in-house, each one the answer to a process problem the team was absorbing manually. Not side projects: production tooling the LiveOps organisation depends on daily.</p>
+
+    <div class="feature">
+      <div class="feature-head">
+        <h3>Unified operations platform</h3>
+        <div class="feature-tag">Flagship</div>
+      </div>
+      <p>Jira, change, problem and RCA connected into one asset-driven platform, fronted by a single parsing intake portal for customers, partners and internal stakeholders. Submissions are split by business entity and routed to the right workflow automatically, replacing fragmented reporting channels and the manual triage that came with them.</p>
+      <div class="metrics">
+        <span><strong>15&ndash;20h</strong> freed per 24&times;7 engineer</span>
+        <span><strong>One</strong> intake path, all entities</span>
+        <span><strong>Audit-ready</strong> by construction</span>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="card"><h4>Diagnostic command centre</h4><p>Internally built application integrating PagerDuty, Apica, RUM and monitoring by API, accepting mitigation plugins that trigger micro-serviced remediation on alert.</p></div>
+      <div class="card"><h4>AI agent orchestration</h4><p>An orchestrator over 13 specialist sub-agents covering triage, correlation, summarisation and reporting, each with an explicitly scoped set of permitted actions.</p></div>
+      <div class="card"><h4>Shift scheduler</h4><p>24&times;7 coverage planning with fatigue and fairness rules, leave handling and automatic gap detection &mdash; replacing spreadsheet rostering for a four-discipline team.</p></div>
+      <div class="card"><h4>Operations wall dashboard</h4><p>Live estate and incident state rendered for the operations wall: readable at distance, no interaction required, so the room shares one picture of the current state.</p></div>
+      <div class="card"><h4>Incident monitor</h4><p>Detection and correlation layer that groups related signals into one candidate incident, cutting duplicate tickets and the time spent working out whether two alerts are the same event.</p></div>
+      <div class="card"><h4>Onboarding programme</h4><p>A structured ramp for new engineers, linked to the SOPs and runbooks it teaches, so capability transfers on a schedule instead of by shadowing whoever is free.</p></div>
+    </div>
+
+    <div class="h2" style="margin-top:18px">AI trust boundaries</div>
+    <p class="p">The useful work in agentic operations is not the model, it is the boundary. Every sub-agent is deployed against an explicit answer to one question: may it act, or may it only advise? Hallucination guards, action allow-lists and human confirmation gates are designed before deployment, not retro-fitted after an incident.</p>
+    <div class="grid2" style="margin-top:15px">
+      <div class="card">
+        <div class="tb-head">Acts autonomously</div>
+        <ul class="ticks">
+          <li>Classification and severity proposal on intake</li>
+          <li>Signal correlation and duplicate collapsing</li>
+          <li>Timeline assembly and stakeholder summaries</li>
+          <li>Routing to the owning team and runbook retrieval</li>
+        </ul>
+      </div>
+      <div class="card card--alt">
+        <div class="tb-head tb-head--soft">Advises only &mdash; human confirms</div>
+        <ul class="ticks ticks--soft">
+          <li>Anything that touches production state</li>
+          <li>Customer, partner and regulator-facing communication</li>
+          <li>Declaring, escalating or closing a major incident</li>
+          <li>Root-cause conclusions entering the permanent record</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot"><span>Christian Scicluna &middot; Senior Manager, Process Improvement</span><span>Page 2 of 3</span></div>
+  </div>
+</section></div>
+
+<!-- ============ PAGE 3 ============ -->
+<div class="wrap"><section class="page">
+  <div class="nav nav--run">
+    <div class="name--sm">Christian Scicluna</div>
+    <div class="role role--run">Career &amp; capability</div>
+  </div>
+
+  <div class="doc">
+    <div class="h2">Career</div>
+    <div class="career">
+      <div class="job">
+        <div class="cdate">2020 &ndash; Present</div>
         <div>
-          <div style="font-size: 37px; font-weight: 700; letter-spacing: -0.9px; line-height: 1.05;">Christian Scicluna</div>
-          <div style="font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 2.3px; color: #7f9dd4; margin-top: 10px;">Senior Manager &middot; Process Improvement</div>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 11.5px; color: #cbd5e1; align-items: flex-start;">
-          <div style="display: flex; align-items: center; gap: 8px; white-space: nowrap;">
-            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#7f9dd4" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M12 21.5s7-6.4 7-11.2a7 7 0 10-14 0c0 4.8 7 11.2 7 11.2z"></path><circle cx="12" cy="10.1" r="2.5"></circle></svg>
-            <span>Marsaskala, Malta</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 8px; white-space: nowrap;">
-            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#7f9dd4" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M6.4 3h3.1l1.5 4-2.1 1.5a12.4 12.4 0 006.6 6.6l1.5-2.1 4 1.5v3.1a2 2 0 01-2.2 2A16.6 16.6 0 013 5.2 2 2 0 015 3h1.4z"></path></svg>
-            <a href="tel:+35679333399">+356 79 33 33 99</a>
-          </div>
-          <div style="display: flex; align-items: center; gap: 8px; white-space: nowrap;">
-            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#7f9dd4" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect x="2.6" y="4.8" width="18.8" height="14.4" rx="2.2"></rect><path d="M3.2 6.2L12 12.8l8.8-6.6"></path></svg>
-            <a href="mailto:sen997@gmail.com">sen997@gmail.com</a>
-          </div>
-          <div style="display: flex; align-items: center; gap: 8px; white-space: nowrap;">
-            <svg viewBox="0 0 24 24" width="12" height="12" fill="#7f9dd4" style="flex-shrink: 0;"><circle cx="4.3" cy="4.4" r="2.3"></circle><rect x="2.3" y="8.5" width="4" height="13.2"></rect><path d="M9.4 8.5h3.9v1.8c.7-1.2 2-2.2 4-2.2 3 0 4.9 2 4.9 5.5v8.1h-4v-7.3c0-1.7-.7-2.8-2.2-2.8s-2.6 1.1-2.6 2.8v7.3h-4z"></path></svg>
-            <a href="https://www.linkedin.com/in/christian-scicluna-itil">linkedin.com/in/christian-scicluna-itil</a>
-          </div>
+          <div class="ctitle">Incident &amp; Crisis Manager <span>&mdash; Betsson Group</span></div>
+          <div class="cdesc">Detailed on page one. Process, tooling and people ownership for the LiveOps organisation across 30+ regulated markets.</div>
         </div>
       </div>
-      <div style="height: 1px; background: rgba(255,255,255,0.14); margin: 22px 0 16px;"></div>
-      <div style="display: flex; gap: 32px; font-size: 11.5px; color: #cbd5e1;">
-        <span style="white-space: nowrap;"><strong style="color: #ffffff; font-weight: 600;">20+ yrs</strong> operations</span>
-        <span style="white-space: nowrap;"><strong style="color: #ffffff; font-weight: 600;">25 staff</strong> across 4 disciplines</span>
-        <span style="white-space: nowrap;"><strong style="color: #ffffff; font-weight: 600;">30+</strong> regulated markets</span>
-        <span style="white-space: nowrap;"><strong style="color: #ffffff; font-weight: 600;">24&times;7</strong> multi-brand estate</span>
-      </div>
-    </div>
-
-    <div style="padding: 34px 56px 36px; display: flex; flex-direction: column; flex: 1;">
-      <p style="font-size: 14px; line-height: 1.62; color: #3d4756; margin: 0; text-wrap: pretty;">Process improvement leader with 20+ years in high-velocity, heavily regulated operations. I analyse how the work actually moves, redesign the workflow around what I find, and build the automation that removes the steps that never needed a person &mdash; including the judgement of where an AI agent is allowed to act and where it may only advise. <strong style="color: #0f172a; font-weight: 600;">Incident and crisis command is the proving ground rather than the ambition:</strong> every redesign is measured on live production numbers, in front of executives.</p>
-
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 28px;">
-        <div style="border: 1px solid #e3e7ee; border-radius: 8px; padding: 16px 16px;">
-          <div style="font-size: 25px; font-weight: 700; color: #1d4ed8; letter-spacing: -0.5px;">&minus;45%</div>
-          <div style="font-size: 11px; font-weight: 600; color: #0f172a; margin: 7px 0 5px;">Alert volume</div>
-          <div style="font-size: 10.5px; line-height: 1.45; color: #6b7687;">Monitoring redesign; non-actionable noise removed.</div>
-        </div>
-        <div style="border: 1px solid #e3e7ee; border-radius: 8px; padding: 16px 16px;">
-          <div style="font-size: 25px; font-weight: 700; color: #1d4ed8; letter-spacing: -0.5px;">+60%</div>
-          <div style="font-size: 11px; font-weight: 600; color: #0f172a; margin: 7px 0 5px;">First-call resolution</div>
-          <div style="font-size: 10.5px; line-height: 1.45; color: #6b7687;">New SOPs and structured 24&times;7 training.</div>
-        </div>
-        <div style="border: 1px solid #e3e7ee; border-radius: 8px; padding: 16px 16px;">
-          <div style="font-size: 25px; font-weight: 700; color: #1d4ed8; letter-spacing: -0.5px;">&lt;60s</div>
-          <div style="font-size: 11px; font-weight: 600; color: #0f172a; margin: 7px 0 5px;">MTTA &middot; MTTR &lt;6.5h</div>
-          <div style="font-size: 10.5px; line-height: 1.45; color: #6b7687;">Organisation records, sustained.</div>
-        </div>
-        <div style="border: 1px solid #e3e7ee; border-radius: 8px; padding: 16px 16px;">
-          <div style="font-size: 25px; font-weight: 700; color: #1d4ed8; letter-spacing: -0.5px;">15&ndash;20h</div>
-          <div style="font-size: 11px; font-weight: 600; color: #0f172a; margin: 7px 0 5px;">Freed per engineer</div>
-          <div style="font-size: 10.5px; line-height: 1.45; color: #6b7687;">One intake portal replaced fragmented channels.</div>
-        </div>
-      </div>
-
-      <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #0f172a; padding-bottom: 8px; border-bottom: 2px solid #0f172a; margin-top: 32px;">Current role</div>
-      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; margin-top: 18px;">
+      <div class="job">
+        <div class="cdate">2017 &ndash; 2020</div>
         <div>
-          <div style="font-size: 16px; font-weight: 700; color: #0f172a;">Incident &amp; Crisis Manager</div>
-          <div style="font-size: 12px; font-weight: 500; color: #6b7687; margin-top: 2px;">Betsson Group &middot; LiveOps</div>
-        </div>
-        <div style="font-size: 10.5px; font-weight: 600; color: #1d4ed8; background: rgba(29,78,216,0.09); padding: 3px 9px; border-radius: 11px; white-space: nowrap;">Jun 2020 &ndash; Present</div>
-      </div>
-      <div style="font-size: 12px; line-height: 1.55; color: #6b7687; margin-top: 10px; font-style: italic;">Title held since 2020; the remit has grown well past it. Process ownership for the LiveOps organisation, ownership of its tooling estate, and design and build of the platforms on page two now sit inside the same role.</div>
-      <ul style="list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 11px;">
-        <li style="position: relative; padding-left: 15px; font-size: 12.8px; line-height: 1.55; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: #1d4ed8;"><strong style="color: #0f172a; font-weight: 600;">Process ownership.</strong> End-to-end incident, change and problem workflows: current-state mapping, removal of handoffs that add delay without adding control, every redesign held to a measured outcome.</li>
-        <li style="position: relative; padding-left: 15px; font-size: 12.8px; line-height: 1.55; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: #1d4ed8;"><strong style="color: #0f172a; font-weight: 600;">Systems and tooling ownership.</strong> Own the LiveOps tooling estate, its budget and its vendor relationships &mdash; and specify, build and run the internal platforms rather than commissioning them out.</li>
-        <li style="position: relative; padding-left: 15px; font-size: 12.8px; line-height: 1.55; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: #1d4ed8;"><strong style="color: #0f172a; font-weight: 600;">People leadership.</strong> 25 staff across four disciplines. Structured one-to-ones, clear progression paths, real ownership delegated rather than tasks; the team retained through successive operating-model changes.</li>
-        <li style="position: relative; padding-left: 15px; font-size: 12.8px; line-height: 1.55; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: #1d4ed8;"><strong style="color: #0f172a; font-weight: 600;">Major incident command.</strong> Primary decision-maker for service restoration across all brands and jurisdictions; owner of B2B and B2C commercial communication during high-impact events.</li>
-        <li style="position: relative; padding-left: 15px; font-size: 12.8px; line-height: 1.55; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: #1d4ed8;"><strong style="color: #0f172a; font-weight: 600;">Continuous improvement.</strong> Post-mortem findings converted into standing process change, monitoring rules and automation, tracked on MTTR, availability and DORA metrics.</li>
-        <li style="position: relative; padding-left: 15px; font-size: 12.8px; line-height: 1.55; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: #1d4ed8;"><strong style="color: #0f172a; font-weight: 600;">Governance.</strong> Operational process kept aligned to ISO 27001 and multi-jurisdiction regulatory frameworks, with audit-ready traceability end to end.</li>
-      </ul>
-
-      <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #e3e7ee; display: flex; justify-content: space-between; font-size: 9.5px; letter-spacing: 1.3px; text-transform: uppercase; color: #9aa4b4;">
-        <span>Christian Scicluna &middot; Senior Manager, Process Improvement</span>
-        <span>Page 1 of 3</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="page" data-screen-label="02" style="display: flex; flex-direction: column; background: #ffffff; font-family: 'Instrument Sans', sans-serif;">
-    <div style="background: linear-gradient(120deg, #16223d 0%, #0f172a 60%, #0b1220 100%); padding: 24px 56px; color: #ffffff; display: flex; justify-content: space-between; align-items: center;">
-      <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.3px;">Christian Scicluna</div>
-      <div style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 2.2px; color: #7f9dd4;">Systems built &amp; run</div>
-    </div>
-
-    <div style="padding: 34px 56px 36px; display: flex; flex-direction: column; flex: 1;">
-      <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #0f172a; padding-bottom: 8px; border-bottom: 2px solid #0f172a;">Systems portfolio</div>
-      <p style="font-size: 12.5px; line-height: 1.55; color: #6b7687; margin: 14px 0 0;">Seven platforms specified, built and run in-house, each one the answer to a process problem the team was absorbing manually. Not side projects: production tooling the LiveOps organisation depends on daily.</p>
-
-      <div style="border: 1px solid #dbe2ec; border-left: 3px solid #1d4ed8; border-radius: 8px; padding: 18px 20px; margin-top: 18px; background: #fafbfd;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px;">
-          <div style="font-size: 14.5px; font-weight: 700; color: #0f172a;">Unified operations platform</div>
-          <div style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.2px; color: #1d4ed8;">Flagship</div>
-        </div>
-        <div style="font-size: 12.5px; line-height: 1.55; color: #3d4756; margin-top: 9px;">Jira, change, problem and RCA connected into one asset-driven platform, fronted by a single parsing intake portal for customers, partners and internal stakeholders. Submissions are split by business entity and routed to the right workflow automatically, replacing fragmented reporting channels and the manual triage that came with them.</div>
-        <div style="display: flex; gap: 22px; margin-top: 11px; padding-top: 11px; border-top: 1px solid #e3e7ee; font-size: 11px; color: #6b7687;">
-          <span><strong style="color: #1d4ed8; font-weight: 700;">15&ndash;20h</strong> freed per 24&times;7 engineer</span>
-          <span><strong style="color: #1d4ed8; font-weight: 700;">One</strong> intake path, all entities</span>
-          <span><strong style="color: #1d4ed8; font-weight: 700;">Audit-ready</strong> by construction</span>
+          <div class="ctitle">Lead Engineer, LiveOps <span>&mdash; Betsson Group</span></div>
+          <div class="cdesc">Authored the standardised SOPs for payment and gaming incident handling across regulated markets &mdash; the baseline the later first-call-resolution gain was built on. Redesigned shift handover to close information silos and make NOC coverage predictable. Worked with development teams to lift monitoring visibility through Grafana and Jira, with a direct effect on uptime.</div>
         </div>
       </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px;">
-        <div style="border: 1px solid #e3e7ee; border-radius: 8px; padding: 16px 17px;">
-          <div style="font-size: 12.8px; font-weight: 700; color: #0f172a;">Diagnostic command centre</div>
-          <div style="font-size: 11.5px; line-height: 1.5; color: #6b7687; margin-top: 7px;">Internally built application integrating PagerDuty, Apica, RUM and monitoring by API, accepting mitigation plugins that trigger micro-serviced remediation on alert.</div>
-        </div>
-        <div style="border: 1px solid #e3e7ee; border-radius: 8px; padding: 16px 17px;">
-          <div style="font-size: 12.8px; font-weight: 700; color: #0f172a;">AI agent orchestration</div>
-          <div style="font-size: 11.5px; line-height: 1.5; color: #6b7687; margin-top: 7px;">An orchestrator over 13 specialist sub-agents covering triage, correlation, summarisation and reporting, each with an explicitly scoped set of permitted actions.</div>
-        </div>
-        <div style="border: 1px solid #e3e7ee; border-radius: 8px; padding: 16px 17px;">
-          <div style="font-size: 12.8px; font-weight: 700; color: #0f172a;">Shift scheduler</div>
-          <div style="font-size: 11.5px; line-height: 1.5; color: #6b7687; margin-top: 7px;">24&times;7 coverage planning with fatigue and fairness rules, leave handling and automatic gap detection &mdash; replacing spreadsheet rostering for a four-discipline team.</div>
-        </div>
-        <div style="border: 1px solid #e3e7ee; border-radius: 8px; padding: 16px 17px;">
-          <div style="font-size: 12.8px; font-weight: 700; color: #0f172a;">Operations wall dashboard</div>
-          <div style="font-size: 11.5px; line-height: 1.5; color: #6b7687; margin-top: 7px;">Live estate and incident state rendered for the operations wall: readable at distance, no interaction required, so the room shares one picture of the current state.</div>
-        </div>
-        <div style="border: 1px solid #e3e7ee; border-radius: 8px; padding: 16px 17px;">
-          <div style="font-size: 12.8px; font-weight: 700; color: #0f172a;">Incident monitor</div>
-          <div style="font-size: 11.5px; line-height: 1.5; color: #6b7687; margin-top: 7px;">Detection and correlation layer that groups related signals into one candidate incident, cutting duplicate tickets and the time spent working out whether two alerts are the same event.</div>
-        </div>
-        <div style="border: 1px solid #e3e7ee; border-radius: 8px; padding: 16px 17px;">
-          <div style="font-size: 12.8px; font-weight: 700; color: #0f172a;">Onboarding programme</div>
-          <div style="font-size: 11.5px; line-height: 1.5; color: #6b7687; margin-top: 7px;">A structured ramp for new engineers, linked to the SOPs and runbooks it teaches, so capability transfers on a schedule instead of by shadowing whoever is free.</div>
-        </div>
-      </div>
-
-      <sc-if value="{{ showAgentDetail }}" hint-placeholder-val="{{ true }}">
-        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #0f172a; padding-bottom: 8px; border-bottom: 2px solid #0f172a; margin-top: 14px;">AI trust boundaries</div>
-        <p style="font-size: 12.5px; line-height: 1.55; color: #3d4756; margin: 14px 0 0;">The useful work in agentic operations is not the model, it is the boundary. Every sub-agent is deployed against an explicit answer to one question: may it act, or may it only advise? Hallucination guards, action allow-lists and human confirmation gates are designed before deployment, not retro-fitted after an incident.</p>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px;">
-          <div style="border: 1px solid #e3e7ee; border-radius: 8px; padding: 16px 17px;">
-            <div style="font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #1d4ed8;">Acts autonomously</div>
-            <ul style="list-style: none; margin: 11px 0 0; padding: 0; display: flex; flex-direction: column; gap: 7px;">
-              <li style="position: relative; padding-left: 14px; font-size: 11.5px; line-height: 1.5; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: #1d4ed8;">Classification and severity proposal on intake</li>
-              <li style="position: relative; padding-left: 14px; font-size: 11.5px; line-height: 1.5; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: #1d4ed8;">Signal correlation and duplicate collapsing</li>
-              <li style="position: relative; padding-left: 14px; font-size: 11.5px; line-height: 1.5; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: #1d4ed8;">Timeline assembly and stakeholder summaries</li>
-              <li style="position: relative; padding-left: 14px; font-size: 11.5px; line-height: 1.5; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: #1d4ed8;">Routing to the owning team and runbook retrieval</li>
-            </ul>
-          </div>
-          <div style="border: 1px solid #e3e7ee; border-radius: 8px; padding: 16px 17px; background: #fafbfd;">
-            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #6b7687;">Advises only &mdash; human confirms</div>
-            <ul style="list-style: none; margin: 11px 0 0; padding: 0; display: flex; flex-direction: column; gap: 7px;">
-              <li style="position: relative; padding-left: 14px; font-size: 11.5px; line-height: 1.5; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: #aab4c4;">Anything that touches production state</li>
-              <li style="position: relative; padding-left: 14px; font-size: 11.5px; line-height: 1.5; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: #aab4c4;">Customer, partner and regulator-facing communication</li>
-              <li style="position: relative; padding-left: 14px; font-size: 11.5px; line-height: 1.5; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: #aab4c4;">Declaring, escalating or closing a major incident</li>
-              <li style="position: relative; padding-left: 14px; font-size: 11.5px; line-height: 1.5; color: #3d4756;" style-before="content: ''; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: #aab4c4;">Root-cause conclusions entering the permanent record</li>
-            </ul>
-          </div>
-        </div>
-      </sc-if>
-
-      <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #e3e7ee; display: flex; justify-content: space-between; font-size: 9.5px; letter-spacing: 1.3px; text-transform: uppercase; color: #9aa4b4;">
-        <span>Christian Scicluna &middot; Senior Manager, Process Improvement</span>
-        <span>Page 2 of 3</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="page" data-screen-label="03" style="display: flex; flex-direction: column; background: #ffffff; font-family: 'Instrument Sans', sans-serif;">
-    <div style="background: linear-gradient(120deg, #16223d 0%, #0f172a 60%, #0b1220 100%); padding: 24px 56px; color: #ffffff; display: flex; justify-content: space-between; align-items: center;">
-      <div style="font-size: 15px; font-weight: 700; letter-spacing: -0.3px;">Christian Scicluna</div>
-      <div style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 2.2px; color: #7f9dd4;">Career &amp; capability</div>
-    </div>
-
-    <div style="padding: 34px 56px 36px; display: flex; flex-direction: column; flex: 1;">
-      <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #0f172a; padding-bottom: 8px; border-bottom: 2px solid #0f172a;">Career</div>
-      <div style="display: flex; flex-direction: column; margin-top: 2px;">
-        <div style="display: grid; grid-template-columns: 116px 1fr; gap: 18px; padding: 16px 0; border-bottom: 1px solid #eef1f6;">
-          <div style="font-size: 11px; font-weight: 600; color: #1d4ed8; padding-top: 2px;">2020 &ndash; Present</div>
-          <div>
-            <div style="font-size: 13px; font-weight: 700; color: #0f172a;">Incident &amp; Crisis Manager <span style="font-weight: 500; color: #6b7687;">&mdash; Betsson Group</span></div>
-            <div style="font-size: 12px; line-height: 1.55; color: #6b7687; margin-top: 5px;">Detailed on page one. Process, tooling and people ownership for the LiveOps organisation across 30+ regulated markets.</div>
-          </div>
-        </div>
-        <div style="display: grid; grid-template-columns: 116px 1fr; gap: 18px; padding: 16px 0; border-bottom: 1px solid #eef1f6;">
-          <div style="font-size: 11px; font-weight: 600; color: #1d4ed8; padding-top: 2px;">2017 &ndash; 2020</div>
-          <div>
-            <div style="font-size: 13px; font-weight: 700; color: #0f172a;">Lead Engineer, LiveOps <span style="font-weight: 500; color: #6b7687;">&mdash; Betsson Group</span></div>
-            <div style="font-size: 12px; line-height: 1.55; color: #6b7687; margin-top: 5px;">Authored the standardised SOPs for payment and gaming incident handling across regulated markets &mdash; the baseline the later first-call-resolution gain was built on. Redesigned shift handover to close information silos and make NOC coverage predictable. Worked with development teams to lift monitoring visibility through Grafana and Jira, with a direct effect on uptime.</div>
-          </div>
-        </div>
-        <div style="display: grid; grid-template-columns: 116px 1fr; gap: 18px; padding: 16px 0; border-bottom: 1px solid #eef1f6;">
-          <div style="font-size: 11px; font-weight: 600; color: #1d4ed8; padding-top: 2px;">2016 &ndash; 2017</div>
-          <div>
-            <div style="font-size: 13px; font-weight: 700; color: #0f172a;">LiveOps Engineer <span style="font-weight: 500; color: #6b7687;">&mdash; Betsson Group</span></div>
-            <div style="font-size: 12px; line-height: 1.55; color: #6b7687; margin-top: 5px;">Ran 24&times;7 incident escalation as the bridge between technical teams and business stakeholders, and standardised handover to make tracking reliable.</div>
-          </div>
-        </div>
-        <div style="display: grid; grid-template-columns: 116px 1fr; gap: 18px; padding: 16px 0; border-bottom: 1px solid #eef1f6;">
-          <div style="font-size: 11px; font-weight: 600; color: #1d4ed8; padding-top: 2px;">2008 &ndash; 2016</div>
-          <div>
-            <div style="font-size: 13px; font-weight: 700; color: #0f172a;">Specialist, Network Management Systems &middot; Senior Technical Officer, NOC <span style="font-weight: 500; color: #6b7687;">&mdash; GO plc</span></div>
-            <div style="font-size: 12px; line-height: 1.55; color: #6b7687; margin-top: 5px;">Eight years on Malta&rsquo;s national network backbone and data centres: led NOC teams, maintained national-scale monitoring systems, and defined the SLA-based alerting and escalation protocols the availability reporting depended on.</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #0f172a; padding-bottom: 8px; border-bottom: 2px solid #0f172a; margin-top: 20px;">Capability</div>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 26px 32px; margin-top: 16px;">
+      <div class="job">
+        <div class="cdate">2016 &ndash; 2017</div>
         <div>
-          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #6b7687;">Process disciplines</div>
-          <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 9px;">
-            <span style="background: rgba(29,78,216,0.08); border: 1px solid #c7d5f0; color: #16357f; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 600; white-space: nowrap;">Process analysis</span>
-            <span style="background: rgba(29,78,216,0.08); border: 1px solid #c7d5f0; color: #16357f; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 600; white-space: nowrap;">Workflow redesign</span>
-            <span style="background: rgba(29,78,216,0.08); border: 1px solid #c7d5f0; color: #16357f; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 600; white-space: nowrap;">Automation design</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">SOP authoring</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">RCA &amp; post-mortem</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">Change enablement</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">ITIL</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">ISO 27001</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">DORA metrics</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">Budget &amp; procurement</span>
-          </div>
-        </div>
-        <div>
-          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #6b7687;">Platforms &amp; tooling</div>
-          <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 9px;">
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">Jira Automation</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">Atlassian Rovo</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">Confluence</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">Coralogix</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">Grafana</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">PagerDuty</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">Opsgenie</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">Datadog</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">Power BI</span>
-            <span style="background: #f2f5fa; border: 1px solid #e3e7ee; color: #3d4756; padding: 4px 9px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap;">SQL</span>
-          </div>
-        </div>
-        <sc-if value="{{ showTechnical }}" hint-placeholder-val="{{ true }}">
-          <div>
-            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #6b7687;">Build &amp; AI stack</div>
-            <div style="font-size: 12px; line-height: 1.6; color: #3d4756; margin-top: 10px;">AWS, Linux and the Microsoft stack; CI/CD; Python, PowerShell, SQL and Postgres; React, HTML and CSS for the internal front ends. Agentic AI in production with scoped autonomy, built on OpenAI, Gemini and Vertex AI, with Claude Code and GitHub Copilot in the build loop.</div>
-          </div>
-        </sc-if>
-        <div>
-          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #6b7687;">Regulated markets</div>
-          <div style="font-size: 12px; line-height: 1.6; color: #3d4756; margin-top: 10px;"><strong style="color: #0f172a; font-weight: 600;">30+ jurisdictions</strong> &mdash; MGA, UKGC, SGA, DGA, ADM, DGOJ, GGL, KSA, GRAI, AGCO, SEGOB, Isle of Man, Brazil, Colombia, Peru, Kenya, Nigeria and others.</div>
+          <div class="ctitle">LiveOps Engineer <span>&mdash; Betsson Group</span></div>
+          <div class="cdesc">Ran 24&times;7 incident escalation as the bridge between technical teams and business stakeholders, and standardised handover to make tracking reliable.</div>
         </div>
       </div>
-
-      <sc-if value="{{ showPersonal }}" hint-placeholder-val="{{ true }}">
-        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #0f172a; padding-bottom: 8px; border-bottom: 2px solid #0f172a; margin-top: 18px;">Beyond the role</div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; margin-top: 16px;">
-          <div>
-            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #6b7687;">Leadership reading</div>
-            <div style="font-size: 12px; line-height: 1.6; color: #3d4756; margin-top: 10px;">Simon Sinek &middot; David L. Marquet &middot; Stephen R. Covey &middot; Jocko Willink and Leif Babin. Intent-based leadership and extreme ownership, applied rather than shelved.</div>
-          </div>
-          <div>
-            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #6b7687;">Personal reading</div>
-            <div style="font-size: 12px; line-height: 1.6; color: #3d4756; margin-top: 10px;">Arthur C. Clarke &middot; Isaac Asimov &middot; Andy Weir &middot; Dan Brown &middot; Tom Clancy</div>
-          </div>
-          <div>
-            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #6b7687;">Outside work</div>
-            <div style="font-size: 12px; line-height: 1.6; color: #3d4756; margin-top: 10px;">Audio engineering, Ableton Live by preference, and video editing in Adobe Premiere. Plus small tools built for the pleasure of finding out how far the automation goes.</div>
-          </div>
+      <div class="job">
+        <div class="cdate">2008 &ndash; 2016</div>
+        <div>
+          <div class="ctitle">Specialist, Network Management Systems &middot; Senior Technical Officer, NOC <span>&mdash; GO plc</span></div>
+          <div class="cdesc">Eight years on Malta&rsquo;s national network backbone and data centres: led NOC teams, maintained national-scale monitoring systems, and defined the SLA-based alerting and escalation protocols the availability reporting depended on.</div>
         </div>
-      </sc-if>
-
-      <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #e3e7ee; display: flex; justify-content: space-between; align-items: center; font-size: 9.5px; letter-spacing: 1.3px; text-transform: uppercase; color: #9aa4b4;">
-        <span>References and system walkthroughs available on request</span>
-        <span>Page 3 of 3</span>
       </div>
     </div>
-  </section>
 
-</doc-page>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showAgentDetail&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showTechnical&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showPersonal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
-class Component extends DCLogic {
-  componentDidMount() { this._remeasure(); }
-  componentDidUpdate() { this._remeasure(); }
-  _remeasure() {
-    const run = () => document.querySelectorAll('doc-page').forEach(d => d._measure && d._measure());
-    requestAnimationFrame(run);
-    setTimeout(run, 120);
-    setTimeout(run, 600);
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(run);
+    <div class="h2" style="margin-top:16px">Capability</div>
+    <div class="cap">
+      <div>
+        <div class="lbl">Process disciplines</div>
+        <div class="tags">
+          <span class="tag tag--a">Process analysis</span>
+          <span class="tag tag--a">Workflow redesign</span>
+          <span class="tag tag--a">Automation design</span>
+          <span class="tag">SOP authoring</span>
+          <span class="tag">RCA &amp; post-mortem</span>
+          <span class="tag">Change enablement</span>
+          <span class="tag">ITIL</span>
+          <span class="tag">ISO 27001</span>
+          <span class="tag">DORA metrics</span>
+          <span class="tag">Budget &amp; procurement</span>
+        </div>
+      </div>
+      <div>
+        <div class="lbl">Platforms &amp; tooling</div>
+        <div class="tags">
+          <span class="tag">Jira Automation</span>
+          <span class="tag">Atlassian Rovo</span>
+          <span class="tag">Confluence</span>
+          <span class="tag">Coralogix</span>
+          <span class="tag">Grafana</span>
+          <span class="tag">PagerDuty</span>
+          <span class="tag">Opsgenie</span>
+          <span class="tag">Datadog</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+      <div>
+        <div class="lbl">Build &amp; AI stack</div>
+        <div class="txt">AWS, Linux and the Microsoft stack; CI/CD; Python, PowerShell, SQL and Postgres; React, HTML and CSS for the internal front ends. Agentic AI in production with scoped autonomy, built on OpenAI, Gemini and Vertex AI, with Claude Code and GitHub Copilot in the build loop.</div>
+      </div>
+      <div>
+        <div class="lbl">Regulated markets</div>
+        <div class="txt"><strong>30+ jurisdictions</strong> &mdash; MGA, UKGC, SGA, DGA, ADM, DGOJ, GGL, KSA, GRAI, AGCO, SEGOB, Isle of Man, Brazil, Colombia, Peru, Kenya, Nigeria and others.</div>
+      </div>
+    </div>
+
+    <div class="h2" style="margin-top:14px">Beyond the role</div>
+    <div class="three">
+      <div>
+        <div class="lbl">Leadership reading</div>
+        <div class="txt">Simon Sinek &middot; David L. Marquet &middot; Stephen R. Covey &middot; Jocko Willink and Leif Babin. Intent-based leadership and extreme ownership, applied rather than shelved.</div>
+      </div>
+      <div>
+        <div class="lbl">Personal reading</div>
+        <div class="txt">Arthur C. Clarke &middot; Isaac Asimov &middot; Andy Weir &middot; Dan Brown &middot; Tom Clancy</div>
+      </div>
+      <div>
+        <div class="lbl">Outside work</div>
+        <div class="txt">Audio engineering, Ableton Live by preference, and video editing in Adobe Premiere. Plus small tools built for the pleasure of finding out how far the automation goes.</div>
+      </div>
+    </div>
+
+    <div class="foot"><span>References and system walkthroughs available on request</span><span>Page 3 of 3</span></div>
+  </div>
+</section></div>
+
+</main>
+
+<script>
+(function(){
+  var root=document.documentElement, label=document.getElementById('themeLabel'), icon=document.getElementById('themeIcon');
+  var SUN='<circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path>';
+  var MOON='<path d="M20.5 14.2A8.5 8.5 0 019.8 3.5a8.5 8.5 0 1010.7 10.7z"></path>';
+  function apply(t){
+    root.setAttribute('data-theme',t);
+    label.textContent = t==='dark' ? 'Light' : 'Dark';
+    icon.innerHTML = t==='dark' ? SUN : MOON;
   }
-  renderVals() {
-    return {
-      showAgentDetail: this.props.showAgentDetail ?? true,
-      showTechnical: this.props.showTechnical ?? true,
-      showPersonal: this.props.showPersonal ?? true,
-    };
+  var saved=null; try{ saved=localStorage.getItem('cv-theme'); }catch(e){}
+  apply(saved || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+  document.getElementById('theme').addEventListener('click',function(){
+    var next = root.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+    apply(next); try{ localStorage.setItem('cv-theme',next); }catch(e){}
+  });
+  document.getElementById('pdf').addEventListener('click',function(){ window.print(); });
+
+  // fit the A4 sheets to narrow viewports without reflowing the layout
+  function fit(){
+    var avail = document.querySelector('.desk').clientWidth - 40;
+    root.style.setProperty('--s', Math.min(1, avail/794));
   }
-}
+  fit();
+  addEventListener('resize', fit);
+})();
 </script>
 </body>
 </html>
